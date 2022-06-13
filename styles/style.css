@@ -14,14 +14,34 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
+  margin: 0;
   font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
-  background-color: #ffffff;
+  background-color: #f2f2f2;
   color: #000000;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0 auto;
+  width: 1200px;
+  background-color: #ffffff;
+}
+
+.main,
+.hotels {
+  flex-grow: 1;
 }
 
 /* Текст в шапке index.html и hotels.html */
@@ -47,9 +67,9 @@ body {
   background-color: #756157;
 }
 
-/* Текст hero файл index.html */
+/* Текст main -> advantages файл index.html */
 
-.hero-city-paragraph {
+.advantages-city-paragraph {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -57,14 +77,12 @@ body {
   text-transform: uppercase;
 }
 
-.hero-reason-paragraph {
+.advantages-reason-paragraph {
   font-size: 22px;
   line-height: 26px;
   text-align: center;
   color: #333333;
 }
-
-/* Текст main -> advantages файл index.html */
 
 .advantages-title {
   font-weight: 700;
@@ -72,6 +90,7 @@ body {
   line-height: 28px;
   text-align: center;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .advantages-white {
@@ -81,17 +100,24 @@ body {
 
 .advantages-number {
   text-align: center;
+  margin: 0;
 }
 
 .advantages-paragraph {
   text-align: center;
+  margin: 0;
 }
 
 .advantages-dark {
   color: #333333;
 }
 
-/* Текст main -> hotel-search файл index.html */
+/* hotel-search файл index.html */
+
+.hotel-search {
+  display: flex;
+  flex-direction: column;
+}
 
 .hotel-search-title {
   font-weight: 700;
@@ -117,9 +143,11 @@ body {
   color: #ffffff;
   background-color: #756157;
   text-decoration: none;
+  width: 574px;
+  margin: auto;
 }
 
-/* Текст footer -> subscribe файлы index.html hotels.html */
+/* Текст subscribe файлы index.html hotels.html */
 
 .subscribe-offer {
   font-weight: 700;
@@ -154,16 +182,6 @@ body {
   text-transform: uppercase;
   color: #ffffff;
   background-color: #82b3d3;
-}
-
-.footer-phone {
-  font-size: 40px;
-  line-height: 40px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #000000;
-  background-color: #ffffff;
-  text-decoration: none;
 }
 
 /* Текст hotel-filters-header файл hotels.html */
@@ -302,7 +320,7 @@ body {
   background-image: url(../images/index-background.jpg);
   background-repeat: no-repeat;
   background-size: 100% auto;
-  background-color: #333333;
+  background-color: #ffffff;
   color: #000000;
 }
 
@@ -320,4 +338,81 @@ body {
   background-size: 100% auto;
   background-color: #000000;
   color: #ffffff;
+}
+
+/* Сетка страниц */
+
+.navigation {
+  display: flex;
+  padding: 0 70px;
+}
+
+.navigation-logo {
+  margin-right: 30px;
+}
+
+.navigation-site {
+  margin: 0 auto 0 0;
+  padding: 0;
+  width: 390px;
+}
+
+.navigation-user {
+  margin: 0;
+  padding: 0;
+  width: 264px;
+}
+
+.hero-welcome {
+  display: block;
+  margin: 0 auto;
+}
+
+.footer {
+  display: flex;
+  padding-left: 72px;
+  padding-right: 72px;
+  justify-content: space-between;
+}
+
+.footer-social-list {
+  width: 116px;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-phone {
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  background-color: #ffffff;
+  text-decoration: none;
+  width: 720px;
+}
+
+.advantages-unorder-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.advantages-item-div {
+  display: flex;
+}
+
+.advantages-list {
+  margin: 0;
+  padding: 0;
+}
+
+.advantages-item-unorder {
+  width: 400px;
+}
+
+.advantages-div-number {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
 }
