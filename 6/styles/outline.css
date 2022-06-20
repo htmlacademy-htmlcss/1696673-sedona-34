@@ -1,0 +1,73 @@
+
+.page-header {
+  outline: #1e2527 solid 2px;
+}
+
+.header-logo {
+  outline: #ffd900 solid 2px;
+}
+/*
+.navigation {
+  outline: #FF0000 solid 2px;
+}
+*/
+.navigation-site {
+  outline: #00ff00 solid 1px;
+}
+
+/*
+.navigation-item {
+  outline: #0000ff solid 1px;
+}
+
+.navigation-link {
+  outline: 1px solid #ffd900;
+}
+
+.navigation-user {
+  outline: #0000ff solid 1px;
+}
+*/
+/*
+.hero-welcome {
+  outline: 1px solid #571f8b;
+}
+
+.hero {
+  outline: 1px solid #ff0000;
+}
+*/
+/*
+.hotel-search {
+  outline: 1px solid #00ff00;
+}
+
+.hotel-search-title {
+  outline: 1px solid #0000ff;
+}
+
+.hotel-search-paragraph {
+  outline: 1px solid #0000ff;
+}
+
+.hotel-search-button {
+  outline: 1px solid #0000ff;
+}
+*/
+/*
+.footer {
+  outline: 2px solid #000000;
+}
+ */
+.footer-social-list {
+  outline: 2px solid #ff0000;
+}
+/*
+.footer-social-item {
+  outline: 2px solid #00b82e;
+}
+ */
+.footer-social-link {
+  outline: 2px solid #0235c2;
+  background-color: #0235c2;
+}
