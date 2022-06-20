@@ -30,6 +30,19 @@ body {
   color: #000000;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .page-container {
   display: flex;
   flex-direction: column;
@@ -39,12 +52,32 @@ body {
   background-color: #ffffff;
 }
 
-.main,
-.hotels {
-  flex-grow: 1;
+.page-header {
+  display: flex;
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
-/* Текст в шапке index.html и hotels.html */
+.header-logo {
+  margin-right: 30px;
+}
+
+.header-logo-img {
+  display: block;
+}
+
+.navigation {
+  display: flex;
+}
+
+.navigation-site {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 517px;
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .navigation-link {
   font-weight: 700;
@@ -53,6 +86,19 @@ body {
   text-transform: capitalize;
   color: #000000;
   text-decoration: none;
+  display: block;
+  padding: 20px 17px;
+}
+
+.navigation-user {
+  margin: 0;
+  padding: 0;
+  width: 264px;
+}
+
+.navigation-user .navigation-link {
+  min-width: 19px;
+  min-height: 19px;
 }
 
 .navigation-button {
@@ -67,7 +113,26 @@ body {
   background-color: #756157;
 }
 
-/* Текст main -> advantages файл index.html */
+.main,
+.hotels {
+  flex-grow: 1;
+}
+
+.hero {
+  background-image: url(../images/index-background.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-color: #ffffff;
+  color: #000000;
+  padding-top: 51px;
+  padding-bottom: 82px;
+  margin-bottom: 63px;
+}
+
+.hero-welcome {
+  display: block;
+  margin: 0 auto;
+}
 
 .advantages-city-paragraph {
   font-weight: 700;
@@ -82,6 +147,28 @@ body {
   line-height: 26px;
   text-align: center;
   color: #333333;
+  margin-bottom: 90px;
+}
+
+.advantages-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.advantages-item-div {
+  display: flex;
+  background-color: #82b3d3;
+  color: #ffffff;
+}
+
+.advantages-div-number {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 92px;
+  padding-bottom: 92px;
 }
 
 .advantages-title {
@@ -91,11 +178,6 @@ body {
   text-align: center;
   text-transform: uppercase;
   margin: 0;
-}
-
-.advantages-white {
-  color: #ffffff;
-  background-color: #82b3d3;
 }
 
 .advantages-number {
@@ -108,15 +190,33 @@ body {
   margin: 0;
 }
 
+.advantages-unorder-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  height: 383px;
+
+}
+
+.advantages-item-unorder {
+  padding-top: 103px;
+  padding-bottom: 102px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .advantages-dark {
   color: #333333;
 }
 
-/* hotel-search файл index.html */
-
 .hotel-search {
   display: flex;
   flex-direction: column;
+  padding-top: 91px;
+  padding-bottom: 93px;
 }
 
 .hotel-search-title {
@@ -125,6 +225,8 @@ body {
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 29px;
 }
 
 .hotel-search-paragraph {
@@ -132,6 +234,8 @@ body {
   line-height: 26px;
   text-align: center;
   color: #333333;
+  margin: 0;
+  margin-bottom: 56px;
 }
 
 .hotel-search-button {
@@ -147,7 +251,18 @@ body {
   margin: auto;
 }
 
-/* Текст subscribe файлы index.html hotels.html */
+.subscribe {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.subscribe-index {
+  background-image: url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-color: #000000;
+  color: #ffffff;
+}
 
 .subscribe-offer {
   font-weight: 700;
@@ -155,17 +270,20 @@ body {
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 29px;
 }
 
 .subscribe-promise {
   font-size: 22px;
   line-height: 26px;
   text-align: center;
+  margin: 0;
+  margin-bottom: 46px;
 }
 
 .subscribe-white {
   color: #ffffff;
-  background-color: #000000;
 }
 
 .subscribe-dark {
@@ -184,8 +302,6 @@ body {
   background-color: #82b3d3;
 }
 
-/* Текст hotel-filters-header файл hotels.html */
-
 .hotels-filter-title {
   font-weight: 700;
   font-size: 60px;
@@ -201,7 +317,6 @@ body {
   background-color: #000000;
 }
 
-/* Текст hotel-filters-selection файл hotels.html */
 .form-legend {
   font-weight: 700;
   font-size: 20px;
@@ -236,8 +351,6 @@ body {
   font-weight: 400;
 }
 
-/* Текст hotels-sorting файл hotels.html */
-
 .catalog-result {
   font-weight: 700;
   font-size: 30px;
@@ -255,7 +368,6 @@ body {
   background-color: #ffffff;
 }
 
-/* Текст hotel-show файл hotels.html */
 .hotel-name {
   font-weight: 700;
   font-size: 24px;
@@ -292,7 +404,6 @@ body {
   background-color: #f2f2f2;
 }
 
-/* Текст hotel-pagination файл hotels.html */
 .pagination-link {
   font-weight: 700;
   font-size: 20px;
@@ -315,23 +426,6 @@ body {
   color: #333333;
 }
 
-/* Подключение фоновых изображений */
-.hero {
-  background-image: url(../images/index-background.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-color: #ffffff;
-  color: #000000;
-}
-
-.subscribe-index {
-  background-image: url(../images/background.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-color: #000000;
-  color: #ffffff;
-}
-
 .hotels-filter {
   background-image: url(../images/catalog-background.jpg);
   background-repeat: no-repeat;
@@ -340,45 +434,29 @@ body {
   color: #ffffff;
 }
 
-/* Сетка страниц */
-
-.navigation {
-  display: flex;
-  padding: 0 70px;
-}
-
-.navigation-logo {
-  margin-right: 30px;
-}
-
-.navigation-site {
-  margin: 0 auto 0 0;
-  padding: 0;
-  width: 390px;
-}
-
-.navigation-user {
-  margin: 0;
-  padding: 0;
-  width: 264px;
-}
-
-.hero-welcome {
-  display: block;
-  margin: 0 auto;
-}
-
 .footer {
   display: flex;
   padding-left: 72px;
   padding-right: 72px;
   justify-content: space-between;
+  height: 120px;
+  align-items: center;
 }
 
 .footer-social-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   width: 116px;
   margin: 0;
   padding: 0;
+  list-style-type: none;
+}
+
+.footer-social-link {
+  min-width: 30px;
+  height: 30px;
+  display: block;
 }
 
 .footer-phone {
@@ -390,29 +468,4 @@ body {
   background-color: #ffffff;
   text-decoration: none;
   width: 720px;
-}
-
-.advantages-unorder-list {
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-.advantages-item-div {
-  display: flex;
-}
-
-.advantages-list {
-  margin: 0;
-  padding: 0;
-}
-
-.advantages-item-unorder {
-  width: 400px;
-}
-
-.advantages-div-number {
-  width: 400px;
-  display: flex;
-  flex-direction: column;
 }
